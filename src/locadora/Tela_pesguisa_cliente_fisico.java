@@ -192,7 +192,12 @@ public class Tela_pesguisa_cliente_fisico extends javax.swing.JInternalFrame
 
     private void MostrarDadosClienteFisicoActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_MostrarDadosClienteFisicoActionPerformed
     {//GEN-HEADEREND:event_MostrarDadosClienteFisicoActionPerformed
-        // TODO add your handling code here:
+
+        //Tela_Principal.getFrames().
+        
+        //Tela_cadastro_cliente_juridico TelaCliente_Juridico = new Tela_cadastro_cliente_juridico();
+        //Tela_Principal.jDesktopPane1.add(TelaCliente_Juridico);
+       // TelaCliente_Juridico.setVisible(true);
     }//GEN-LAST:event_MostrarDadosClienteFisicoActionPerformed
 
 

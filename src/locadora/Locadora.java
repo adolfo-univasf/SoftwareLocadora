@@ -26,8 +26,9 @@ public class Locadora
 
 
 
-   
-   
+     static private Locadora p;
+    
+
    
    
     
@@ -37,29 +38,15 @@ public class Locadora
     public static void main(String[] args)
     {
         
-       /* MongoClient mongo = new MongoClient("localhost", 27017);
-        DB db;
-        db = mongo.getDB("journaldev");
-        Set<String> collections = db.getCollectionNames();
-        System.out.print("collections");
-    
-        */
-        
-        
-        
-        
-        //ClienteFisico c1 = new ClienteFisico();
-        
-        
+    /**
+     *
+     */
+
         Tela_Principal InterfaceGrafica = new Tela_Principal();
         InterfaceGrafica.setVisible(true);
-        
+      
 
-        
-        
-        
-        
-           //public static void main(String args[])
+       
     //{
         /*Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

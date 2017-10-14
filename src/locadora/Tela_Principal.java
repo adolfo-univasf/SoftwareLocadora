@@ -6,13 +6,27 @@
 package locadora;
 
 
+
 /**
  *
  * @author adolfo
  */
 public class Tela_Principal extends javax.swing.JFrame
 {
+    
+    /*
+         o padrão de projeto utilizado "Singleton" para retornar apenas a instancia unica da tela principal
+    */
 
+    
+    private static final Tela_Principal INSTANCIA = new Tela_Principal();
+    
+    public static Tela_Principal instancia() {
+        return INSTANCIA;
+    }
+
+    
+    
     /**
      * Creates new form InterfaceGrafica
      */
