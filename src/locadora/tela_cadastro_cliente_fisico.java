@@ -426,10 +426,10 @@ public class tela_cadastro_cliente_fisico extends javax.swing.JInternalFrame
               avisoClienteFisico.setText("Cliente já cadastrado !");
           
           //System.out.println(Locadora.MapaClienteFisicos.ConsultaNomeFisico("1"));
-         System.out.println(Locadora.MapaClienteFisicos.listaClientesFisicos());
+         //System.out.println(Locadora.MapaClienteFisicos.listaClientesFisicos());
           //Locadora.MapaClienteFisicos.listaClientesFisicos();
       // Locadora.MapaClienteFisicos.NovoCliente(c1);
-               
+          System.out.println(Locadora.MapaClienteFisicos.listaClientesFisicos());     
        
         
         //System.out.println(nomeClienteFisico.getText());
