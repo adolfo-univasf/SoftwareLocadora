@@ -21,7 +21,7 @@ public class Locadorageradores {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+   /* public static void main(String[] args) {
         
        System.out.println("EXEMPLOS >>> LEIA OS COMENTARIOS NO CODIGO");
      //abaixo serao instanciados novos clientes e um gerador para teste demonstrativo
@@ -42,5 +42,5 @@ public class Locadorageradores {
         af1.completaraluguel();//completando o aluguel novamente pois o gerador ja estava liberado
         System.out.println("LEIA ATENTAMENTE OS COMENTARIOS");
     }
-    
+    */
 }

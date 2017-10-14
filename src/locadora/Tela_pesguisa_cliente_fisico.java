@@ -34,9 +34,9 @@ public class Tela_pesguisa_cliente_fisico extends javax.swing.JInternalFrame
         PesquisarClientesFisicos = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         NomeClienteFisico = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
+        limpar = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        MostrarDadosClienteFisico = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
 
         setClosable(true);
@@ -54,12 +54,12 @@ public class Tela_pesguisa_cliente_fisico extends javax.swing.JInternalFrame
 
         jLabel2.setText("Nome do cliente fisico");
 
-        jButton2.setText("Limpar");
-        jButton2.addActionListener(new java.awt.event.ActionListener()
+        limpar.setText("Limpar");
+        limpar.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
-                jButton2ActionPerformed(evt);
+                limparActionPerformed(evt);
             }
         });
 
@@ -73,7 +73,15 @@ public class Tela_pesguisa_cliente_fisico extends javax.swing.JInternalFrame
             }
         });
 
-        jButton1.setText("Mostrar Dados");
+        MostrarDadosClienteFisico.setText("Mostrar Dados");
+        MostrarDadosClienteFisico.setEnabled(false);
+        MostrarDadosClienteFisico.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                MostrarDadosClienteFisicoActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Listar");
         jButton3.addActionListener(new java.awt.event.ActionListener()
@@ -97,11 +105,11 @@ public class Tela_pesguisa_cliente_fisico extends javax.swing.JInternalFrame
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jTextField1)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton2)
+                        .addComponent(limpar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton1)
+                        .addComponent(MostrarDadosClienteFisico)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(PesquisarClientesFisicos))))
         );
@@ -117,8 +125,8 @@ public class Tela_pesguisa_cliente_fisico extends javax.swing.JInternalFrame
                 .addGap(48, 48, 48)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PesquisarClientesFisicos)
-                    .addComponent(jButton2)
-                    .addComponent(jButton1)
+                    .addComponent(limpar)
+                    .addComponent(MostrarDadosClienteFisico)
                     .addComponent(jButton3))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -148,9 +156,15 @@ public class Tela_pesguisa_cliente_fisico extends javax.swing.JInternalFrame
         //System.out.println(Locadora.MapaClienteFisicos.listaClientesFisicos());
         
         if(Locadora.MapaClienteFisicos.VerificaClienteFisico(NomeClienteFisico.getText()))
+        {
             jTextField1.setText("Cliente cadastrado!");
+            MostrarDadosClienteFisico.setEnabled(true);
+        }
         else
+        {
             jTextField1.setText("Erro cliente não cadastrado!");
+            MostrarDadosClienteFisico.setEnabled(false);
+        }
         
 
         
@@ -159,11 +173,12 @@ public class Tela_pesguisa_cliente_fisico extends javax.swing.JInternalFrame
         
     }//GEN-LAST:event_PesquisarClientesFisicosActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButton2ActionPerformed
-    {//GEN-HEADEREND:event_jButton2ActionPerformed
+    private void limparActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_limparActionPerformed
+    {//GEN-HEADEREND:event_limparActionPerformed
         // TODO add your handling code here:
-        jTextField1.setText(" ");
-    }//GEN-LAST:event_jButton2ActionPerformed
+        jTextField1.setText(null);
+        MostrarDadosClienteFisico.setEnabled(false);
+    }//GEN-LAST:event_limparActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jTextField1ActionPerformed
     {//GEN-HEADEREND:event_jTextField1ActionPerformed
@@ -175,15 +190,20 @@ public class Tela_pesguisa_cliente_fisico extends javax.swing.JInternalFrame
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void MostrarDadosClienteFisicoActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_MostrarDadosClienteFisicoActionPerformed
+    {//GEN-HEADEREND:event_MostrarDadosClienteFisicoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MostrarDadosClienteFisicoActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton MostrarDadosClienteFisico;
     private javax.swing.JTextField NomeClienteFisico;
     private javax.swing.JButton PesquisarClientesFisicos;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JButton limpar;
     // End of variables declaration//GEN-END:variables
 }
