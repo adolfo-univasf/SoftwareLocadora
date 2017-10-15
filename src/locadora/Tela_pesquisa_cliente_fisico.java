@@ -9,13 +9,13 @@ package locadora;
  *
  * @author adolfo
  */
-public class Tela_pesguisa_cliente_fisico extends javax.swing.JInternalFrame
+public class Tela_pesquisa_cliente_fisico extends javax.swing.JInternalFrame
 {
 
     /**
      * Creates new form Tela_pesguisa_cliente_fisico
      */
-    public Tela_pesguisa_cliente_fisico()
+    public Tela_pesquisa_cliente_fisico()
     {
         initComponents();
     }

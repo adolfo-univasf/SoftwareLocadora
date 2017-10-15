@@ -57,17 +57,12 @@ public class Tela_Principal extends javax.swing.JFrame
         jMenu4 = new javax.swing.JMenu();
         Cadastro_cliente_fisico = new javax.swing.JMenuItem();
         Cadastro_cliente_juridico = new javax.swing.JMenuItem();
-        jMenu6 = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem8 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenuItem6 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem7 = new javax.swing.JMenuItem();
         jMenuItem9 = new javax.swing.JMenuItem();
-        jMenuItem10 = new javax.swing.JMenuItem();
 
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
         jFrame1.getContentPane().setLayout(jFrame1Layout);
@@ -133,6 +128,13 @@ public class Tela_Principal extends javax.swing.JFrame
         jMenu5.add(jMenuItem1);
 
         jMenuItem2.setText("Juridico");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu5.add(jMenuItem2);
 
         jMenu1.add(jMenu5);
@@ -162,14 +164,6 @@ public class Tela_Principal extends javax.swing.JFrame
 
         jMenu1.add(jMenu4);
 
-        jMenu6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/alterar.png"))); // NOI18N
-        jMenu6.setText("Alterar");
-        jMenu1.add(jMenu6);
-
-        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/delete.png"))); // NOI18N
-        jMenuItem3.setText("Excluir");
-        jMenu1.add(jMenuItem3);
-
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Geradores");
@@ -188,21 +182,6 @@ public class Tela_Principal extends javax.swing.JFrame
             }
         });
         jMenu2.add(jMenuItem4);
-
-        jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/alterar.png"))); // NOI18N
-        jMenuItem5.setText("Alterar");
-        jMenuItem5.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                jMenuItem5ActionPerformed(evt);
-            }
-        });
-        jMenu2.add(jMenuItem5);
-
-        jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/delete.png"))); // NOI18N
-        jMenuItem6.setText("Excluir");
-        jMenu2.add(jMenuItem6);
 
         jMenuBar1.add(jMenu2);
 
@@ -223,17 +202,6 @@ public class Tela_Principal extends javax.swing.JFrame
         });
         jMenu3.add(jMenuItem9);
 
-        jMenuItem10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/alterar.png"))); // NOI18N
-        jMenuItem10.setText("Alterar ");
-        jMenuItem10.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                jMenuItem10ActionPerformed(evt);
-            }
-        });
-        jMenu3.add(jMenuItem10);
-
         jMenuBar1.add(jMenu3);
 
         setJMenuBar(jMenuBar1);
@@ -252,15 +220,10 @@ public class Tela_Principal extends javax.swing.JFrame
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jMenuItem5ActionPerformed
-    {//GEN-HEADEREND:event_jMenuItem5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem5ActionPerformed
-
     private void Cadastro_cliente_fisicoActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_Cadastro_cliente_fisicoActionPerformed
     {//GEN-HEADEREND:event_Cadastro_cliente_fisicoActionPerformed
         // TODO add your handling code here:
-        tela_cadastro_cliente_fisico TelaCliente_Fisico = new tela_cadastro_cliente_fisico();
+        Tela_cadastro_cliente_fisico TelaCliente_Fisico = new Tela_cadastro_cliente_fisico();
         jDesktopPane1.add(TelaCliente_Fisico);
         TelaCliente_Fisico.setVisible(true);   // A tela cadastro aparece dentro da tela principal         
     }//GEN-LAST:event_Cadastro_cliente_fisicoActionPerformed
@@ -274,11 +237,6 @@ public class Tela_Principal extends javax.swing.JFrame
                 
     }//GEN-LAST:event_Cadastro_cliente_juridicoActionPerformed
 
-    private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jMenuItem10ActionPerformed
-    {//GEN-HEADEREND:event_jMenuItem10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem10ActionPerformed
-
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jMenuItem4ActionPerformed
     {//GEN-HEADEREND:event_jMenuItem4ActionPerformed
         // TODO add your handling code here:
@@ -290,7 +248,7 @@ public class Tela_Principal extends javax.swing.JFrame
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jMenuItem1ActionPerformed
     {//GEN-HEADEREND:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
-        Tela_pesguisa_cliente_fisico TelaPCF = new Tela_pesguisa_cliente_fisico();
+        Tela_pesquisa_cliente_fisico TelaPCF = new Tela_pesquisa_cliente_fisico();
         jDesktopPane1.add(TelaPCF);
         TelaPCF.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
@@ -299,6 +257,14 @@ public class Tela_Principal extends javax.swing.JFrame
     {//GEN-HEADEREND:event_jMenuItem9ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem9ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jMenuItem2ActionPerformed
+    {//GEN-HEADEREND:event_jMenuItem2ActionPerformed
+      Tela_pesquisa_cliente_juridico TelaPCJ = new Tela_pesquisa_cliente_juridico();
+        jDesktopPane1.add(TelaPCJ);
+        TelaPCJ.setVisible(true);  
+        
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -315,15 +281,10 @@ public class Tela_Principal extends javax.swing.JFrame
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
-    private javax.swing.JMenu jMenu6;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;

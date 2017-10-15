@@ -15,8 +15,8 @@ public class ClienteJuridico extends Acliente
 {
     private String cnpj;
 
-    public ClienteJuridico(String cnpj, String nome, String DataCadastro, String telefone, String cidade, String bairro, String cep, String rua, String numero, String email) {
-        super(nome, DataCadastro, telefone, cidade, bairro, cep, rua, numero, email);
+    public ClienteJuridico(String cnpj,String celular, String nome, String DataCadastro, String telefone, String cidade, String bairro, String cep, String rua, String numero, String email) {
+        super(nome, DataCadastro, telefone,celular, cidade, bairro, cep, rua, numero, email);
         this.cnpj = cnpj;
     }
 

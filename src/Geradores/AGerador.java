@@ -11,11 +11,11 @@ package Geradores;
  */
 public abstract class AGerador implements IGerador {
     
-    private String Num,Chassi,Pot,horas,comb;
+    private String Num_Serie,Chassi,Pot,horas,comb;
     private boolean status;
 
     public AGerador(String Num, String Chassi, String Pot, String horas, String comb, boolean status) {
-        this.Num = Num;
+        this.Num_Serie = Num;
         this.Chassi = Chassi;
         this.Pot = Pot;
         this.horas = horas;
@@ -25,12 +25,12 @@ public abstract class AGerador implements IGerador {
 abstract void inutilizar();
    
     
-    public String getNum() {
-        return Num;
+    public String getNum_Serie() {
+        return Num_Serie;
     }
 
-    public void setNum(String Num) {
-        this.Num = Num;
+    public void setNum_Serie(String Num) {
+        this.Num_Serie = Num;
     }
 
     public String getChassi() {

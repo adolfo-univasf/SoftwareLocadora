@@ -16,13 +16,12 @@ import locadorageradores.endereco;
 public class ClienteFisico extends Acliente{
     private String cpf;
     private String rg;
-    private String celular;
+    
 
     public ClienteFisico(String cpf, String rg, String celular, String nome, String DataCadastro, String telefone, String cidade, String bairro, String cep, String rua, String numero, String email) {
-        super(nome, DataCadastro, telefone, cidade, bairro, cep, rua, numero, email);
+        super(nome, DataCadastro, telefone,celular, cidade, bairro, cep, rua, numero, email);
         this.cpf = cpf;
         this.rg = rg;
-        this.celular = celular;
     }
 
  
@@ -55,14 +54,6 @@ public class ClienteFisico extends Acliente{
         this.rg = rg;
     }
 
-    public String getCelular()
-    {
-        return celular;
-    }
 
-    public void setCelular(String celular)
-    {
-        this.celular = celular;
-    }
     
 }

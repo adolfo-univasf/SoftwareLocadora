@@ -95,15 +95,12 @@ public class CadastroCliente
     
    public Set<String> listaClientesFisicos()
     {
-        
         return MapaDeClientesFisicos.keySet();
-      /*for (String key : MapaDeClientesFisicos.keySet()) 
-      {              
-       //Capturamos o valor a partir da chave
-       ClienteFisico value = MapaDeClientesFisicos.get(key);
-       System.out.println("key = "+ key + " valor = " + value.getNome());
-      }
-        */
+    } 
+   
+      public Set<String> listaClientesJuridicos()
+    {
+        return MapaDeClientesJuridicos.keySet();
     } 
           
     

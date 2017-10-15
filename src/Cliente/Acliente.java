@@ -17,11 +17,23 @@ public abstract class Acliente implements Icliente
     private endereco end; //agregação da classe endereco
     private String DataCadastro;
     private String telefone;
+    private String celular;
 
-    public Acliente(String nome, String DataCadastro, String telefone,String cidade, String bairro, String cep, String rua, String numero, String email) {
+    public String getCelular()
+    {
+        return celular;
+    }
+
+    public void setCelular(String celular)
+    {
+        this.celular = celular;
+    }
+
+    public Acliente(String nome, String DataCadastro, String telefone,String celular, String cidade, String bairro, String cep, String rua, String numero, String email) {
         this.nome = nome;
         this.DataCadastro = DataCadastro;
         this.telefone = telefone;
+        this.celular = celular;
         this.end = new endereco(cidade,bairro,cep,rua,numero,email);
     }
 
