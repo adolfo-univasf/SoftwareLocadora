@@ -365,14 +365,8 @@ public class Tela_cadastro_cliente_juridico extends javax.swing.JInternalFrame
 
     private void SalvarClienteJuridicosActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_SalvarClienteJuridicosActionPerformed
     {//GEN-HEADEREND:event_SalvarClienteJuridicosActionPerformed
-        //ClienteFisico cliente = new ClienteFisico();
-        //endereco e = new endereco(CidadeCliente.getText(),);
-
         // salvando os dados (atributos) contidos na interface grafica em um novo objeto cliente Fisico
 
-        
-
-        
         ClienteJuridico c2=new ClienteJuridico(CNPJclienteJuridico.getText(),
             CelularClienteJuridico.getText(),
             nomeClienteJuridico.getText(),
@@ -394,13 +388,6 @@ public class Tela_cadastro_cliente_juridico extends javax.swing.JInternalFrame
         else
             avisoClienteJuridico.setText("Cliente já cadastrado!");
 
-        //System.out.println(Locadora.MapaClienteFisicos.ConsultaNomeFisico("1"));
-        //System.out.println(Locadora.MapaClienteFisicos.listaClientesFisicos());
-        //Locadora.MapaClienteFisicos.listaClientesFisicos();
-        // Locadora.MapaClienteFisicos.NovoCliente(c1);
-        //System.out.println(Locadora.MapaClienteFisicos.listaClientesFisicos());
-
-        //System.out.println(nomeClienteFisico.getText());
     }//GEN-LAST:event_SalvarClienteJuridicosActionPerformed
 
     private void EmailClienteJuridicoActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_EmailClienteJuridicoActionPerformed

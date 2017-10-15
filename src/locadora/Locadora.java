@@ -6,6 +6,7 @@
 package locadora;
 
 import Cliente.CadastroCliente;
+import Geradores.CadastroGerador;
 
 /*import Cliente.ClienteFisico;
 import com.mongodb.DB;
@@ -23,6 +24,7 @@ public class Locadora
 {
    static CadastroCliente MapaClienteFisicos = new CadastroCliente() ;
    static CadastroCliente MapaClienteJuridicos = new CadastroCliente();
+   static CadastroGerador MapaGeradores = new CadastroGerador();
 
 
 

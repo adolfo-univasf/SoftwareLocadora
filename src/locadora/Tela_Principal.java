@@ -170,6 +170,13 @@ public class Tela_Principal extends javax.swing.JFrame
 
         jMenuItem8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/pesquisar.png"))); // NOI18N
         jMenuItem8.setText("Pesquisar");
+        jMenuItem8.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                jMenuItem8ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem8);
 
         jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/adicionar.png"))); // NOI18N
@@ -265,6 +272,13 @@ public class Tela_Principal extends javax.swing.JFrame
         TelaPCJ.setVisible(true);  
         
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jMenuItem8ActionPerformed
+    {//GEN-HEADEREND:event_jMenuItem8ActionPerformed
+        Tela_pesquisa_Gerador TelaPCG = new Tela_pesquisa_Gerador();
+        jDesktopPane1.add(TelaPCG);
+        TelaPCG.setVisible(true); 
+    }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     /**
      * @param args the command line arguments

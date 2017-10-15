@@ -13,8 +13,8 @@ public class Gerador extends AGerador {
 
     private boolean funcional; //varivel que indica se o gerador está ou nao funcional
 
-    public Gerador(String Num, String Chassi, String Pot, String horas, String comb, boolean status) {
-        super(Num, Chassi, Pot, horas, comb, status);
+    public Gerador(String Num, String Chassi, String Pot, String horas, String comb, boolean status, String nota) {
+        super(Num, Chassi, Pot, horas, comb, status,nota);
         this.funcional = true;
     }
     public void reativar(){ //Reativa um gerador que antes estava com defeito
