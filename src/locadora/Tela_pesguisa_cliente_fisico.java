@@ -37,7 +37,7 @@ public class Tela_pesguisa_cliente_fisico extends javax.swing.JInternalFrame
         limpar = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
         MostrarDadosClienteFisico = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        BotaolistaClientesFisicos = new javax.swing.JButton();
 
         setClosable(true);
 
@@ -83,12 +83,12 @@ public class Tela_pesguisa_cliente_fisico extends javax.swing.JInternalFrame
             }
         });
 
-        jButton3.setText("Listar");
-        jButton3.addActionListener(new java.awt.event.ActionListener()
+        BotaolistaClientesFisicos.setText("Listar");
+        BotaolistaClientesFisicos.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
-                jButton3ActionPerformed(evt);
+                BotaolistaClientesFisicosActionPerformed(evt);
             }
         });
 
@@ -107,7 +107,7 @@ public class Tela_pesguisa_cliente_fisico extends javax.swing.JInternalFrame
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(limpar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton3)
+                        .addComponent(BotaolistaClientesFisicos)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(MostrarDadosClienteFisico)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -127,7 +127,7 @@ public class Tela_pesguisa_cliente_fisico extends javax.swing.JInternalFrame
                     .addComponent(PesquisarClientesFisicos)
                     .addComponent(limpar)
                     .addComponent(MostrarDadosClienteFisico)
-                    .addComponent(jButton3))
+                    .addComponent(BotaolistaClientesFisicos))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -185,15 +185,18 @@ public class Tela_pesguisa_cliente_fisico extends javax.swing.JInternalFrame
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButton3ActionPerformed
-    {//GEN-HEADEREND:event_jButton3ActionPerformed
+    private void BotaolistaClientesFisicosActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_BotaolistaClientesFisicosActionPerformed
+    {//GEN-HEADEREND:event_BotaolistaClientesFisicosActionPerformed
+        Tela_ListaClientesFisicos lista = new Tela_ListaClientesFisicos();
+        Tela_Principal.jDesktopPane1.add(lista);
+        lista.setVisible(true);
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_BotaolistaClientesFisicosActionPerformed
 
     private void MostrarDadosClienteFisicoActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_MostrarDadosClienteFisicoActionPerformed
     {//GEN-HEADEREND:event_MostrarDadosClienteFisicoActionPerformed
 
-        //Tela_Principal.getFrames().
+        
         
         //Tela_cadastro_cliente_juridico TelaCliente_Juridico = new Tela_cadastro_cliente_juridico();
         //Tela_Principal.jDesktopPane1.add(TelaCliente_Juridico);
@@ -202,10 +205,10 @@ public class Tela_pesguisa_cliente_fisico extends javax.swing.JInternalFrame
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BotaolistaClientesFisicos;
     private javax.swing.JButton MostrarDadosClienteFisico;
     private javax.swing.JTextField NomeClienteFisico;
     private javax.swing.JButton PesquisarClientesFisicos;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;

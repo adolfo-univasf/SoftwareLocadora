@@ -5,6 +5,11 @@
  */
 package locadora;
 
+import java.util.Iterator;
+import java.util.Set;
+import java.util.Vector;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author adolfo
@@ -18,6 +23,24 @@ public class Tela_ListaClientesFisicos extends javax.swing.JInternalFrame
     public Tela_ListaClientesFisicos()
     {
         initComponents();
+        
+       
+        DefaultTableModel lista = (DefaultTableModel)tabela.getModel();
+         Set<String> dados =  Locadora.MapaClienteFisicos.listaClientesFisicos();
+          
+         
+        System.out.println( dados.size());
+        int count = 0;
+        for(String valor : dados)
+        {
+            System.out.println(++count + " -> " + valor);
+            Object[] dad = {valor};
+            lista.addRow(dad);
+        }
+
+
+
+        System.out.println(Locadora.MapaClienteFisicos.listaClientesFisicos());
     }
 
     /**
@@ -32,22 +55,21 @@ public class Tela_ListaClientesFisicos extends javax.swing.JInternalFrame
 
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tabela = new javax.swing.JTable();
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        setClosable(true);
+
+        tabela.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][]
             {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String []
             {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Nome dos Clientes Fisicos"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tabela);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -84,6 +106,6 @@ public class Tela_ListaClientesFisicos extends javax.swing.JInternalFrame
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tabela;
     // End of variables declaration//GEN-END:variables
 }
