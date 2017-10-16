@@ -47,6 +47,7 @@ public class Tela_Principal extends javax.swing.JFrame
         menuBar1 = new java.awt.MenuBar();
         menu1 = new java.awt.Menu();
         menu2 = new java.awt.Menu();
+        jMenu6 = new javax.swing.JMenu();
         jPanel4 = new javax.swing.JPanel();
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -61,8 +62,12 @@ public class Tela_Principal extends javax.swing.JFrame
         jMenuItem8 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
-        jMenuItem7 = new javax.swing.JMenuItem();
-        jMenuItem9 = new javax.swing.JMenuItem();
+        jMenu7 = new javax.swing.JMenu();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        jMenuItem11 = new javax.swing.JMenuItem();
+        jMenu8 = new javax.swing.JMenu();
+        jMenuItem6 = new javax.swing.JMenuItem();
+        jMenuItem10 = new javax.swing.JMenuItem();
 
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
         jFrame1.getContentPane().setLayout(jFrame1Layout);
@@ -82,6 +87,8 @@ public class Tela_Principal extends javax.swing.JFrame
 
         menu2.setLabel("Edit");
         menuBar1.add(menu2);
+
+        jMenu6.setText("jMenu6");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -194,20 +201,55 @@ public class Tela_Principal extends javax.swing.JFrame
 
         jMenu3.setText("Aluguéis");
 
-        jMenuItem7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/pesquisar.png"))); // NOI18N
-        jMenuItem7.setText("Pesquisar");
-        jMenu3.add(jMenuItem7);
+        jMenu7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/pesquisar.png"))); // NOI18N
+        jMenu7.setText("Pesquisar");
 
-        jMenuItem9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/adicionar.png"))); // NOI18N
-        jMenuItem9.setText("Novo Aluguel");
-        jMenuItem9.addActionListener(new java.awt.event.ActionListener()
+        jMenuItem5.setText("Fisico");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
-                jMenuItem9ActionPerformed(evt);
+                jMenuItem5ActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem9);
+        jMenu7.add(jMenuItem5);
+
+        jMenuItem11.setText("Juridico");
+        jMenuItem11.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                jMenuItem11ActionPerformed(evt);
+            }
+        });
+        jMenu7.add(jMenuItem11);
+
+        jMenu3.add(jMenu7);
+
+        jMenu8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/adicionar.png"))); // NOI18N
+        jMenu8.setText("Novo Aluguel");
+
+        jMenuItem6.setText("Fisico");
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                jMenuItem6ActionPerformed(evt);
+            }
+        });
+        jMenu8.add(jMenuItem6);
+
+        jMenuItem10.setText("Juridico");
+        jMenuItem10.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                jMenuItem10ActionPerformed(evt);
+            }
+        });
+        jMenu8.add(jMenuItem10);
+
+        jMenu3.add(jMenu8);
 
         jMenuBar1.add(jMenu3);
 
@@ -230,7 +272,7 @@ public class Tela_Principal extends javax.swing.JFrame
     private void Cadastro_cliente_fisicoActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_Cadastro_cliente_fisicoActionPerformed
     {//GEN-HEADEREND:event_Cadastro_cliente_fisicoActionPerformed
         // TODO add your handling code here:
-        Tela_cadastro_cliente_fisico TelaCliente_Fisico = new Tela_cadastro_cliente_fisico();
+        Tela_cadastro_cliente_Fisico TelaCliente_Fisico = new Tela_cadastro_cliente_Fisico();
         jDesktopPane1.add(TelaCliente_Fisico);
         TelaCliente_Fisico.setVisible(true);   // A tela cadastro aparece dentro da tela principal         
     }//GEN-LAST:event_Cadastro_cliente_fisicoActionPerformed
@@ -260,11 +302,6 @@ public class Tela_Principal extends javax.swing.JFrame
         TelaPCF.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jMenuItem9ActionPerformed
-    {//GEN-HEADEREND:event_jMenuItem9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem9ActionPerformed
-
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jMenuItem2ActionPerformed
     {//GEN-HEADEREND:event_jMenuItem2ActionPerformed
       Tela_pesquisa_cliente_juridico TelaPCJ = new Tela_pesquisa_cliente_juridico();
@@ -279,6 +316,35 @@ public class Tela_Principal extends javax.swing.JFrame
         jDesktopPane1.add(TelaPCG);
         TelaPCG.setVisible(true); 
     }//GEN-LAST:event_jMenuItem8ActionPerformed
+
+    private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jMenuItem11ActionPerformed
+    {//GEN-HEADEREND:event_jMenuItem11ActionPerformed
+        Tela_pesquisa_Aluguel_juridico tpaj = new Tela_pesquisa_Aluguel_juridico();
+        jDesktopPane1.add(tpaj);
+        tpaj.setVisible(true);       
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem11ActionPerformed
+
+    private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jMenuItem10ActionPerformed
+    {//GEN-HEADEREND:event_jMenuItem10ActionPerformed
+        Tela_cadastro_Aluguel_juridico tcaj = new Tela_cadastro_Aluguel_juridico();
+        jDesktopPane1.add(tcaj);
+        tcaj.setVisible(true); 
+    }//GEN-LAST:event_jMenuItem10ActionPerformed
+
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jMenuItem5ActionPerformed
+    {//GEN-HEADEREND:event_jMenuItem5ActionPerformed
+        Tela_pesquisa_Aluguel_fisico tpaf = new Tela_pesquisa_Aluguel_fisico();
+        jDesktopPane1.add(tpaf);
+        tpaf.setVisible(true);
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
+
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jMenuItem6ActionPerformed
+    {//GEN-HEADEREND:event_jMenuItem6ActionPerformed
+                Tela_cadastro_Aluguel_fisico tcaf = new Tela_cadastro_Aluguel_fisico();
+        jDesktopPane1.add(tcaf);
+        tcaf.setVisible(true); 
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -295,13 +361,18 @@ public class Tela_Principal extends javax.swing.JFrame
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
+    private javax.swing.JMenu jMenu6;
+    private javax.swing.JMenu jMenu7;
+    private javax.swing.JMenu jMenu8;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem10;
+    private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem7;
+    private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem8;
-    private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPanel jPanel4;
     private java.awt.Menu menu1;
     private java.awt.Menu menu2;
